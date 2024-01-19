@@ -2,7 +2,8 @@
     display: inline-block;
     padding: 10px;
     background:rgb(255, 215, 154);
-    
+    margin: 10px;
+
 
 }
 .img > img {
