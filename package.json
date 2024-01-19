@@ -1,0 +1,26 @@
+{
+  "name": "namaste-react-episode-06-expoloring-world",
+  "version": "1.0.0",
+  "description": "expoloring world and architecture and hooks and fetch data",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshatbhatya/namaste-react-episode-06-expoloring-world.git"
+  },
+  "keywords": [
+    "react",
+    "js",
+    "useeffect",
+    "microservices"
+  ],
+  "author": "akshat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshatbhatya/namaste-react-episode-06-expoloring-world/issues"
+  },
+  "homepage": "https://github.com/akshatbhatya/namaste-react-episode-06-expoloring-world#readme"
+}
