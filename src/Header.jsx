@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.css"
 
 function Header() {
+
+  let [login,setLogin]=useState(false)
   return (
     <div className='header-parent'>
 
@@ -14,6 +16,8 @@ function Header() {
                 <li>About</li>
                 <li>Contact Us</li>
                 <li>Cart</li>
+
+                <button onClick={()=>setLogin(!login)}>{login?"loged out": "login"}</button>
             </ul>
         </div>
       
