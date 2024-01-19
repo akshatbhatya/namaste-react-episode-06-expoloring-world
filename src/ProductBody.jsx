@@ -27,6 +27,10 @@ function ProductBody() {
         }
         getdata()
     }, [])
+    if(product.length==0){
+       return <h1>loading...</h1>
+    }
+
 
 
     console.log(product);
