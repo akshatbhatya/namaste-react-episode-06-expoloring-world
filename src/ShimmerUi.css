@@ -1,0 +1,19 @@
+.shimmer{
+    display: inline-block;
+    padding: 10px;
+    background:rgb(255, 215, 154);
+    margin: 10px;
+    width: 380px;
+    height: 600px;
+
+
+}
+
+.shimmer-parent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img > img {
+    width: auto;
+}

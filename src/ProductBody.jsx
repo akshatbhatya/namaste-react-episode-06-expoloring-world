@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./ProductBody.css"
 import Card from './Card'
+import ShimerUi from './ShimerUi'
 
 function ProductBody() {
     let [product, setProduct] = useState([])
@@ -28,7 +29,7 @@ function ProductBody() {
         getdata()
     }, [])
     if(product.length==0){
-       return <h1>loading...</h1>
+       return <ShimerUi/>
     }
 
 
