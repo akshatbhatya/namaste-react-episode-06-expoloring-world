@@ -1,0 +1,10 @@
+.card{
+    display: inline-block;
+    padding: 10px;
+    background:rgb(255, 215, 154);
+    
+
+}
+.img > img {
+    width: auto;
+}
