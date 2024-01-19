@@ -5,6 +5,8 @@ import ShimerUi from './ShimerUi'
 
 function ProductBody() {
     let [product, setProduct] = useState([])
+    let [search,setSearch]=useState([])
+    let[searchData,setSearchData]=useState([])
     useEffect(() => {
 
         async function getdata() {
@@ -20,6 +22,7 @@ function ProductBody() {
 
                 }
                 setProduct(AllProduct)
+                setSearchData(AllProduct)
 
             } catch (error) {
                 console.log(error);
@@ -31,23 +34,31 @@ function ProductBody() {
     if(product.length==0){
        return <ShimerUi/>
     }
-
-
-
-    console.log(product);
+  console.log("ProductBody rendered");
 
     let handleTop = () => {
         let sorted = product.filter((product) => product.avgRating > 4)
         setProduct(sorted)
     }
+    let handleSearch=()=>{
+        if(search==""){
+            setSearchData(product)
+            return
+
+        }
+        let sortedSerch=product.filter((product)=>product.name.toLowerCase().includes(search.toLowerCase()));
+        setSearchData(sortedSerch)
+    }
     return (
 
         <>
+           <input type="text" placeholder='type name here'  onChange={(e)=>setSearch(e.currentTarget.value)}/>
+           <button onClick={handleSearch}>search</button>
             <button onClick={handleTop}>top rated</button>
             <div className='productbody-parent'>
 
 
-                {product.map((card) => (
+                {searchData.map((card) => (
                     <Card card={card} key={card.id} />
                 ))}
 
